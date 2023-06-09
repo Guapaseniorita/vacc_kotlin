@@ -1,4 +1,2 @@
-import java.time.LocalDate
-
-data class Input(val birthday : String) {
+data class Input(val year : Int,  val month : Int, val day : Int) {
 }

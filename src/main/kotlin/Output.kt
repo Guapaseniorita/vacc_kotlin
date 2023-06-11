@@ -2,7 +2,7 @@ import java.time.LocalDate
 import java.time.Period
 
 class Output {
-    fun result(input: Input): String {
+    fun result(input: Input) {
         val today = LocalDate.now()
         val birthday = LocalDate.of(input.year, input.month, input.day)
         val period = Period.between(birthday, today)
@@ -10,6 +10,6 @@ class Output {
         val month = period.months
         val factory = VaccineResultFactory()
         val vaccineResult = factory.createResult(year, month)
-        return vaccineResult.getMessage()
+        println(vaccineResult.getMessage())
     }
 }
